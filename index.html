@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href=" http://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <title>Emoji</title>
+</head>
+<body>
+   <center>
+    <div class="pt-16 lg:flex-row flex-col">
+        <p class="font-semibold text-6xl mb-7">Random Emoji Faces</p>
+        <p class="font-thin gap-2 text-xl mb-7">Click the button to see a random emoji face!</p>
+        <p class="mb-12 text-7xl" id="emoji">😀</p>
+        <span class="text-white bg-green-500 py-2 rounded px-3">
+            <button onclick="showRandomEmoji()">Show Random Emoji</button>
+        </span>
+       </div> 
+   </center>
+
+   <script> 
+    const smileFaces= ['😂','😁','😃','😌','🙂','😏','😋','😎','😊','😅'];
+    function showRandomEmoji(){
+        const randomIndex = Math.floor(Math.random() * smileFaces.length);
+        const randomSmile = smileFaces[randomIndex];
+        document.getElementById('emoji').textContent = randomSmile;
+    }
+
+   </script>
+</body>
+</html>
